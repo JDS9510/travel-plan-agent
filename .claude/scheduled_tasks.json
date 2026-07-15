@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    {
+      "id": "d3f37044",
+      "cron": "*/5 * * * *",
+      "prompt": "Check the current context window usage percentage from the system reminders. If context utilization exceeds 50%, immediately run the /compact command to compress the conversation. If below 50%, take no action and just log the current usage percentage.",
+      "createdAt": 1784104989377,
+      "recurring": true,
+      "createdBySessionId": "acb42623-f694-40ac-bdb7-6de926db43de",
+      "createdByPid": 4928
+    }
+  ]
+}

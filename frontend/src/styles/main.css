@@ -1,0 +1,227 @@
+/* ============================================================
+   全局样式 —— 旅行行程规划前端
+   ============================================================ */
+
+/* 页面基础 */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: #f0f2f5;
+  color: #303133;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* 页面容器 */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+/* 卡片通用间距 */
+.card-spacing {
+  margin-bottom: 20px;
+}
+
+/* 步骤区域 */
+.step-section {
+  margin-bottom: 24px;
+}
+
+/* 行程 Markdown 预览容器 */
+.markdown-preview {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 20px 24px;
+  background: #fafafa;
+  border: 1px solid #e4e7ed;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #303133;
+}
+
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3 {
+  color: #1f2f3d;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.markdown-preview h1 { font-size: 22px; border-bottom: 2px solid #409eff; padding-bottom: 6px; }
+.markdown-preview h2 { font-size: 18px; border-bottom: 1px solid #dcdfe6; padding-bottom: 4px; }
+.markdown-preview h3 { font-size: 15px; }
+
+.markdown-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+.markdown-preview table th,
+.markdown-preview table td {
+  border: 1px solid #dcdfe6;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.markdown-preview table th {
+  background: #eef5fe;
+  font-weight: 600;
+}
+
+.markdown-preview table tr:nth-child(even) {
+  background: #f9fafc;
+}
+
+.markdown-preview ul, .markdown-preview ol {
+  padding-left: 24px;
+}
+
+.markdown-preview code {
+  background: #f0f2f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+/* 页面顶部 Logo */
+.app-header {
+  text-align: center;
+  padding: 32px 0 8px;
+}
+
+.app-header h1 {
+  font-size: 26px;
+  color: #303133;
+  margin: 0;
+  font-weight: 700;
+}
+
+.app-header p {
+  color: #909399;
+  font-size: 14px;
+  margin: 6px 0 0;
+}
+
+/* 偏好标签选择器 */
+.tag-check-group .el-checkbox-button__inner {
+  border-radius: 2px;
+}
+
+/* ============================================================
+   响应式布局
+   ============================================================ */
+
+/* 平板端 (≤768px) */
+@media (max-width: 768px) {
+  .page-container {
+    max-width: 100%;
+    padding: 16px 12px 32px;
+  }
+
+  .app-header {
+    padding: 20px 0 4px;
+  }
+
+  .app-header h1 {
+    font-size: 20px;
+  }
+
+  .app-header p {
+    font-size: 12px;
+  }
+
+  .card-spacing {
+    margin-bottom: 14px;
+  }
+
+  /* el-steps 在小屏隐藏描述文字 */
+  .el-step__description {
+    display: none;
+  }
+
+  /* 表单 label 顶置 */
+  .el-form-item {
+    display: block;
+  }
+
+  .el-form-item__label {
+    width: 100% !important;
+    text-align: left !important;
+    padding-bottom: 4px;
+  }
+
+  .el-form-item__content {
+    margin-left: 0 !important;
+  }
+
+  /* 天数/预算从双列改单列 */
+  .el-row .el-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  /* 表格横向滚动 */
+  .el-table {
+    font-size: 12px;
+  }
+
+  .el-table__body-wrapper {
+    overflow-x: auto;
+  }
+}
+
+/* 手机端 (≤480px) */
+@media (max-width: 480px) {
+  .page-container {
+    padding: 12px 8px 24px;
+  }
+
+  .app-header h1 {
+    font-size: 18px;
+  }
+
+  .app-subtitle {
+    display: none;
+  }
+
+  .app-footer {
+    font-size: 11px;
+    padding: 12px 0 20px;
+  }
+
+  .card-spacing {
+    margin-bottom: 10px;
+  }
+
+  /* 按钮全宽 */
+  .action-bar .el-button,
+  .action-bar .el-dropdown {
+    width: 100%;
+  }
+
+  .action-bar .el-button {
+    margin-left: 0;
+  }
+
+  /* 预算图例文字缩小 */
+  .budget-legend {
+    font-size: 11px;
+    gap: 8px;
+  }
+
+  /* 历史记录操作按钮竖排 */
+  .history-item-actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
